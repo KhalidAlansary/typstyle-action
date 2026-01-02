@@ -1,8 +1,8 @@
-FROM rust:1.88-slim
+FROM alpine:3.23
 
-RUN cargo install typstyle --locked
+ADD https://github.com/typstyle-rs/typstyle/releases/latest/download/typstyle-x86_64-unknown-linux-musl /usr/local/bin/typstyle
 
-ENV PATH=/root/.cargo/bin:$PATH
+RUN chmod +x /usr/local/bin/typstyle
 
 COPY entrypoint.sh .
 
