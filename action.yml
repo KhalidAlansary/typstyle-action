@@ -1,4 +1,4 @@
-name: typstyle
+name: typstyle-test
 description: GitHub Action to run typstyle, a Typst formatter
 author: Gray Espinoza
 
